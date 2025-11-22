@@ -1,0 +1,1 @@
+// Create the multiplication table from 1 to 10 for a given number n and return the table as an array.
