@@ -16,3 +16,6 @@ function myfun(arr){
 const arr = [43,23,4,324,42,4,34];
 myfun(arr);
 console.log(arr);
+
+
+// understand this again
