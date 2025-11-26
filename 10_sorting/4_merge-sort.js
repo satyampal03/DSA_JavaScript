@@ -8,9 +8,9 @@ function mergeSort(arr){
     
     return  merge(mergeSort(leftArr), mergeSort(rightArr)); // passing leftArr, rightArr- as n parameter into -merge function
 }
-function merge(){
+function merge(leftArr, rightArr){
     const sortedArr = [];
-    while(leftArr.length && rightArr.length){
+    while(leftArr.length & rightArr.length){
         if(leftArr[0] <= rightArr[0]){
             sortedArr.push(leftArr.shift())
         }else{
