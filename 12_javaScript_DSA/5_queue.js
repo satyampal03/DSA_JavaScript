@@ -6,7 +6,7 @@ class Queue {
         this.itmes.push(element)
     }
     dequeue(){
-        return this.itmes.length===0
+        return this.itmes.length === 0
     }
     peek(){
         if(!this.isEmpty()){
@@ -29,7 +29,5 @@ queue.enqueue(10)
 queue.enqueue(2)
 queue.enqueue(130)
 queue.enqueue(104)
-
 console.log(queue.size);
-
 queue.print();
