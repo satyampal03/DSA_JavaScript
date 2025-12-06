@@ -14,20 +14,6 @@
 // }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const longestCommonPrefix = function(strs) {
     // If the array is empty, the common prefix is an empty string
     if (strs.length === 0) {
