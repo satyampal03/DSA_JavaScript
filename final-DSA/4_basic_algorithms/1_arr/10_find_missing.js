@@ -10,5 +10,5 @@ function findMissingNumber(arr) {
     return expectedSum - actualSum;
 } 
 
-const myArray = [0, 1, 3]; 
+const myArray = [0, 1, 3];
 console.log(findMissingNumber(myArray));
