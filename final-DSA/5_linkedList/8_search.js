@@ -23,7 +23,15 @@ class LinkedList{
         if(this.isEmpty()){
             return -1;
         }
-
-        
+        let i = 0;
+        let current = this.head;
+        while(current){
+            if(current.value === value){
+                return i;
+            }
+            current = current.next;
+            i++;
+        }
+        return -1;
     }
 }
