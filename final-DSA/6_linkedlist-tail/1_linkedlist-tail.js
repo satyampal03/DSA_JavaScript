@@ -58,7 +58,54 @@ class LinkedList{
         this.size++;
     }
 
-    removeFromFront(value){
-        
+    removeFromFront(){
+        if(this.isEmpty()){
+            return null
+        }else{
+            const value = this.head.value;
+            this.head = this.head.next;
+            this.size--;
+            return value;
+        }
+    }
+
+    removeFromEnd(){
+        if(this.isEmpty()){
+            return null
+        }
+
+           
+            const value = this.tail.value;
+            if(this.size ===1){
+                this.head = null;
+                this.tail = null;
+            }else{
+                let prev = this.head;
+                while(prev.next !== this.tail){
+                    prev = prev.next;
+                }
+                prev = null;
+                this.tail = prev;
+            }
+
+            this.size--;
+            return value;
     }
 }
+
+const list = new LinkedList()
+console.log('List is empty?', list.isEmpty())
+console.log('List size', list.getSize())
+list.print()
+
+list.append(1)
+list.append(2)
+list.append(3)
+list.prepend(0)
+list.print()
+console.log('List size', list.getSize())
+
+list.removeFromEnd();
+console.log('List size', list.getSize())
+
+list.print()
