@@ -27,7 +27,7 @@ class LinkedList{
             let current = this.head;
             let listValue = '';
             while(current){
-                listValue += `${current.value} ===>`;
+                listValue += `${current.value} ==>`;
                 current = current.next;
             }
             console.log(listValue);
@@ -73,10 +73,8 @@ class LinkedList{
         if(this.isEmpty()){
             return null
         }
-
-           
-            const value = this.tail.value;
-            if(this.size ===1){
+         let value = this.tail.value;
+            if(this.size === 1){
                 this.head = null;
                 this.tail = null;
             }else{
@@ -84,12 +82,15 @@ class LinkedList{
                 while(prev.next !== this.tail){
                     prev = prev.next;
                 }
-                prev = null;
+                prev.next = null;
                 this.tail = prev;
             }
 
             this.size--;
             return value;
+
+
+
     }
 }
 
@@ -104,6 +105,12 @@ list.append(3)
 list.prepend(0)
 list.print()
 console.log('List size', list.getSize())
+
+list.removeFromFront();
+console.log('List size', list.getSize())
+
+list.print()
+
 
 list.removeFromEnd();
 console.log('List size', list.getSize())
